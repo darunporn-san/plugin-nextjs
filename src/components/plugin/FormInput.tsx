@@ -10,6 +10,7 @@ const FormInput: React.FC<FormInputProps> = ({
   name,
   control,
   label,
+  tooltip,
   placeholder,
   options = [],
   value,
@@ -31,16 +32,18 @@ const FormInput: React.FC<FormInputProps> = ({
         if (type === "select") {
           return (
             <BaseSelect
-              value={field.value}
+              value={field.value || value || ""}
               onChange={field.onChange}
               options={options}
               placeholder={placeholder}
               label={label}
+              tooltip={tooltip}
               error={error ? error : undefined}
               required={required}
               className={className}
               clearable={clearable}
               id={inputId}
+              disabled={disabled}
             />
           );
         }
@@ -84,6 +87,7 @@ const FormInput: React.FC<FormInputProps> = ({
             type={type}
             placeholder={placeholder}
             label={label}
+            tooltip={tooltip}
             error={error ? error : undefined}
             required={required}
             className={className}
