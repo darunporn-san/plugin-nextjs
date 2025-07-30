@@ -1,12 +1,39 @@
 {
-  "name": "seller-center",
-  "version": "0.1.0",
-  "private": true,
+  "name": "@darunporn-san/seller-center-ui-plugin",
+  "version": "1.0.0",
+  "description": "Reusable UI components plugin for seller center applications built with React, TypeScript, and Tailwind CSS",
+  "keywords": ["react", "nextjs", "ui", "plugin", "components", "typescript", "tailwind", "seller-center"],
+  "author": "Darunporn San",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/darunporn-san/seller-center-ui-plugin.git"
+  },
+  "homepage": "https://github.com/darunporn-san/seller-center-ui-plugin#readme",
+  "bugs": {
+    "url": "https://github.com/darunporn-san/seller-center-ui-plugin/issues"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "private": false,
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
+    "build:plugin": "rollup -c",
+    "build:types": "tsc --declaration --emitDeclarationOnly --outDir dist",
+    "build:lib": "npm run build:plugin && npm run build:types",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "lint:fix": "next lint --fix",
+    "type-check": "tsc --noEmit",
+    "prepublishOnly": "npm run build:lib",
+    "test": "echo \"No tests specified\" && exit 0"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.1.1",
