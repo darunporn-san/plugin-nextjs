@@ -1,17 +1,17 @@
 {
-  "name": "@darunporn-san/seller-center-ui-plugin",
+  "name": "@darunporn-san/plugin-nextjs",
   "version": "1.0.0",
-  "description": "Reusable UI components plugin for seller center applications built with React, TypeScript, and Tailwind CSS",
-  "keywords": ["react", "nextjs", "ui", "plugin", "components", "typescript", "tailwind", "seller-center"],
+  "description": "Next.js plugin components from darunporn-san",
+  "keywords": ["react", "nextjs", "plugin", "components", "typescript", "tailwind"],
   "author": "Darunporn San",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/darunporn-san/seller-center-ui-plugin.git"
+    "url": "https://github.com/darunporn-san/plugin-nextjs.git"
   },
-  "homepage": "https://github.com/darunporn-san/seller-center-ui-plugin#readme",
+  "homepage": "https://github.com/darunporn-san/plugin-nextjs#readme",
   "bugs": {
-    "url": "https://github.com/darunporn-san/seller-center-ui-plugin/issues"
+    "url": "https://github.com/darunporn-san/plugin-nextjs/issues"
   },
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -43,7 +43,6 @@
     "@radix-ui/react-select": "^2.2.5",
     "@radix-ui/react-slot": "^1.2.3",
     "@radix-ui/react-tabs": "^1.1.12",
-    "@types/xlsx": "^0.0.36",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "date-fns": "^4.1.0",
